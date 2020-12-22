@@ -18,12 +18,11 @@ const reducer = (state = initialState, action) => {
             return { ...state, cartItems: state.cartItems.filter(item => item !== action.payload.ele) }
 
         case 'SAVE_TOKEN':
-            console.log(action.payload.cartItems);
             return { ...state, token: action.payload.token, user_id: action.payload.user_id, cartItems: action.payload.cartItems }
 
         case 'CALCULATE_PAYMENT_AMOUNT':
             let amount = 0;
-            state.cartItems.map(ele => {
+            state.cartItems.forEach(ele => {
                 amount = amount + ele.minPrice
             });
             return { ...state, paymentAmount: amount }

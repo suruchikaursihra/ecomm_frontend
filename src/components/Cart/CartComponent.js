@@ -11,7 +11,7 @@ import ROUTES from '../../shared/constants/routes';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { connect } from 'react-redux';
-import { Redirect, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { spinnerService } from '../../shared/services/spinner.service';
 import { CallApi } from "../../shared/services/api.service";
 import CONFIG from '../../configuration/index';

@@ -166,7 +166,7 @@ export class DashboardComponent extends Component {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            {ele.popular == 'TRUE' ? <Alert variant="outlined" severity="success" className={classes.alert}>Popular</Alert> : ''}
+                                            {ele.popular === 'TRUE' ? <Alert variant="outlined" severity="success" className={classes.alert}>Popular</Alert> : ''}
                                             <Button className={classes.book} color="primary" onClick={e => { this.saveToRedis(ele) }}>
                                                 Book
                                             </Button>
@@ -174,7 +174,7 @@ export class DashboardComponent extends Component {
                                     </Card>
                                 </Grid>
                             ))}
-                            {this.state.testList.length == 0 ? <Typography variant="h6" gutterBottom>
+                            {this.state.testList.length === 0 ? <Typography variant="h6" gutterBottom>
                                 No Tests Found !
                                             </Typography> : ''}
                         </Grid>

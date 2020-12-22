@@ -124,7 +124,7 @@ export class HeaderComponent extends Component {
      */
     onChange = (value) => {
         this.setState({ search: value });
-        if (value == '') {
+        if (value === '') {
             this.searchTests();
         }
     }
