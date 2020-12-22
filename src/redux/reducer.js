@@ -11,7 +11,6 @@ const reducer = (state = initialState, action) => {
             return { ...state, cartItems: Array.from(new Set([...state.cartItems, action.payload.ele])) }
 
         case 'RESET_CART':
-            console.log(("hcsucbsjfgsjfg"));
             return { ...state, cartItems: [] }
 
         case 'DELETE_FROM_CART':
